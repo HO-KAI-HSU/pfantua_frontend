@@ -190,6 +190,56 @@ header .nav_close{
 	display: none;
 }
 
+/*=[pagination]=========*/
+
+
+.section-pagination-wrap {
+	width: auto;
+	height: 33px;
+	margin: 100px 0px 100px 0px;
+	object-fit: contain;
+	font-family: NotoSans;
+	font-size: 24px;
+	font-weight: 500;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: normal;
+	letter-spacing: normal;
+	color: #324031;
+  }
+
+  .section-pagination-wrap .mainnav {
+	display: block;
+	margin: 0 0 0;
+	text-align: center;
+	}
+	.section-pagination-wrap .mainnav ul {
+		margin: 0;
+		padding: 0;
+	}
+	.section-pagination-wrap .mainnav ul li {
+		position: relative;
+		display: inline-block;
+		padding: 0 0 20px;
+	}
+	.section-pagination-wrap .mainnav ul li a {
+		cursor: pointer;
+		margin: 10px 20px 0 20px;
+		vertical-align: bottom;
+		line-height: 24px;
+		font-size: 1.4em;
+		color: #324031;
+		font-size: 24px;
+		font-weight: 500;
+		font-stretch: normal;
+		font-style: normal;
+		line-height: normal;
+		letter-spacing: normal;
+	}
+
+	.section-pagination-wrap .mainnav ul li a .now-page {
+		color: #bebebe;
+	}
 
 /*=[section]=========*/
 .section-title{

@@ -51,13 +51,18 @@
               </div>
             </div>
           </div>
+          <Pagination :propsPage="Page" :propsLimit="Limit" :propsTotal="Total" @switchPage="getListBySwitchPage"/>
         </div>
       </div>
     </div>
   </div>
 </template>
 <script>
+import Pagination from "@/components/Pagination.vue";
 export default {
+  components: {
+    Pagination
+  },
   data() {
     return {
       Ready: false,
@@ -73,7 +78,18 @@ export default {
     this.ActivityList = response.NewsList;
     this.ActivityRows = Math.ceil(response.NewsList.length / 3);
     this.Total = response.Total;
+    this.Page = 1;
+    this.Limit = 9;
     this.Ready = true;
+  },
+  methods: {
+    async getListBySwitchPage(nowPage) {
+      var response = await this.$api.getActivityList(nowPage, 9);
+      this.ActivityList = response.NewsList;
+      this.ActivityRows = Math.ceil(response.NewsList.length / 3);
+      this.Total = response.Total;
+      this.Page = nowPage;
+    },
   },
 };
 </script>
