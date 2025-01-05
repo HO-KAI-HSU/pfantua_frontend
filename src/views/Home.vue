@@ -61,7 +61,7 @@
       <div class="wrapper">
         <div class="w3-row">
           <div v-for="(activity, index) in ActivityList">			
-            <div class="w3-col w3-center" :key="activity.NewsID" style="width:30%">
+            <div class="w3-col w3-center" :key="activity.NewsID" :title="activity.NewsID">
               <router-link :to="`/news/${activity.NewsID}`" title="點擊可進入活動內容">
                 <div class="section-activity-item">
                   <img :src="activity.ImageUrl|imageCDN" alt="活動資訊主圖片"
@@ -119,7 +119,7 @@
       <div class="wrapper">
         <div class="w3-row" v-for="(rowIndex) in 2" :key="rowIndex" :title="rowIndex">
           <div v-for="(news, index) in NewsList">	
-            <div class="w3-col w3-container" :key="news.NewsID" style="width:47%" v-if="rowIndex == (Math.floor(index / 2) + 1)" :title="news.NewsID">
+            <div class="w3-col w3-container" :key="news.NewsID" v-if="rowIndex == (Math.floor(index / 2) + 1)" :title="news.NewsID">
               <router-link :to="`/news/${news.NewsID}`" title="點擊可進入活動內容">
                 <div class="section-news-date-container">
                     <span class="year">{{ news.NewsTime | toYYYY }}</span>

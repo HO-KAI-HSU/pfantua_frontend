@@ -39,7 +39,7 @@
           </span>
           <div class="w3-row" v-for="(rowIndex) in (NewsRows)" :key="rowIndex" :title="rowIndex">
             <div v-for="(news, index) in NewsList">			
-              <div class="w3-col w3-center" :key="news.NewsID" style="width:30%" v-if="rowIndex == (Math.floor(index / 3) + 1)" :title="news.NewsID">        
+              <div class="w3-col w3-center" :key="news.NewsID" v-if="rowIndex == (Math.floor(index / 3) + 1)" :title="news.NewsID">        
                 <router-link :to="`/news/${news.NewsID}`" title="點擊可進入最新消息內容">
                   <div class="section-item">
                     <img :src="news.ImageUrl|imageCDN" alt="最新消息主圖片"
