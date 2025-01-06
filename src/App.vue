@@ -19,20 +19,8 @@ Vue.prototype.setBase = function (cssClass) {
   base.addClass(cssClass);
 };
 
-// const CURRENT_CLASSROOM_ID_SESSION_KEY = 'CURRENT_CLASSROOM_ID';
-
-// Vue.prototype.setCurrentClassRoom = function (id) {
-//   sessionStorage.setItem(CURRENT_CLASSROOM_ID_SESSION_KEY, id);
-// };
-
-// Vue.prototype.getCurrentClassRoom = function () {
-//   return sessionStorage.getItem(CURRENT_CLASSROOM_ID_SESSION_KEY);
-// };
-
-
 import Header from "@/components/Header.vue";
 import Footer from "@/components/Footer.vue";
-
 
 export default {
   data() {

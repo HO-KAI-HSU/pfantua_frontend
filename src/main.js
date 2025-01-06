@@ -10,7 +10,6 @@ import './plugins/directive'
 import user from './plugins/user'
 import VueMeta from 'vue-meta';
 import VueScrollTo from 'vue-scrollto';
-//import VueAnalytics from 'vue-analytics'
 
 let scrollOptions = {
   container: "body",
@@ -36,14 +35,6 @@ Vue.config.productionTip = false;
 Vue.use(VueMeta);
 
 Vue.use(VueScrollTo, scrollOptions);
-
-/*Vue.use(VueAnalytics, {
-  id: 'UA-131083018-1',
-  router,
-  autoTracking: {
-    screenview: true
-  }
-});*/
 
 router.beforeEach((to, from, next) => {
   if (to.meta.title) {
