@@ -17,6 +17,36 @@ const routes = [
     component: () => import('../views/CollageInfo.vue'),
   },
   {
+    path: '/collageDepartmentColleagueList',
+    name: 'CollageDepartmentColleagueList',
+    meta: { title: '師資陣容-台灣藝術大學藝術學院'},
+    component: () => import('../views/CollageDepartmentColleagueList.vue'),
+  },
+  {
+    path: '/collageDepartmentColleague/:id',
+    name: 'CollageDepartmentColleague',
+    meta: { title: '師資資訊-台灣藝術大學藝術學院'},
+    component: () => import('../views/CollageDepartmentColleague.vue'),
+  },
+  {
+    path: '/collageDepartmentList',
+    name: 'CollageDepartmentList',
+    meta: { title: '系所單位-台灣藝術大學藝術學院'},
+    component: () => import('../views/CollageDepartmentList.vue'),
+  },
+  {
+    path: '/collageHead/:id',
+    name: 'CollageHead',
+    meta: { title: '現任院長-台灣藝術大學藝術學院'},
+    component: () => import('../views/CollageHead.vue'),
+  },
+  {
+    path: '/collageHistoryHead/:id',
+    name: 'CollageHistoryHead',
+    meta: { title: '歷任院長-台灣藝術大學藝術學院'},
+    component: () => import('../views/CollageHistoryHead.vue'),
+  },
+  {
     path: '/newsList',
     name: 'NewsList',
     meta: { title: '最新消息-台灣藝術大學藝術學院'},

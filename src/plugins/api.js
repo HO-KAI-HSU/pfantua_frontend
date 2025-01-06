@@ -177,6 +177,13 @@ export default {
     getCollageInfo() {
         return this.get('/pfantua/public/frontend/api/collageInfo');
     },
+    getCollageColleagueInfo(id) {
+        return this.get('/pfantua/public/frontend/api/collageColleague/' + id);
+    },
+    getAllDepartmentColleagues() {
+        return this.get('/pfantua/public/frontend/api/allDepartmentColleagues');
+    },
+
     notFound() {
         return router.push('/404');
     },

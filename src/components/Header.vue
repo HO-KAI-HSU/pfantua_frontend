@@ -32,7 +32,7 @@
                   <router-link to="/activityList" title="點擊可進入活動資訊"><img src="img/index_img/5.png" srcset="img/index_img/5@2x.png 2x, img/index_img/5@3x.png 3x" class="menuitem"></router-link>
                 </li>
 								<li>
-                  <router-link to="/collageDepartment" title="點擊可進入系所單位"><img src="img/index_img/8.png" srcset="img/index_img/8@2x.png 2x, img/index_img/8@3x.png 3x" class="menuitem"></router-link>
+                  <router-link to="/collageDepartmentList" title="點擊可進入系所單位"><img src="img/index_img/8.png" srcset="img/index_img/8@2x.png 2x, img/index_img/8@3x.png 3x" class="menuitem"></router-link>
                 </li>
                 <li>
                   <router-link to="/collageCourse" title="點擊可進入學院課程"><img src="img/index_img/9.png" srcset="img/index_img/9@2x.png 2x, img/index_img/9@3x.png 3x" class="menuitem"></router-link>
