@@ -45,7 +45,7 @@
                 srcset="img/collage_img/rectangle-114@2x.png 2x,
                         img/collage_img/rectangle-114@3x.png 3x"
                 class="banner-block">
-              <img :src="CollageColleague.ImageUrl|imageCDN" alt="現任院長主圖片"
+              <img :src="CollageColleague.ImageUrl|imageCDN" alt="師資主圖片"
                 class="banner-background">
             </div>
           </div>
@@ -84,7 +84,7 @@ export default {
   data() {
     return {
       Ready: false,
-      CollageColleague: {},
+      CollageColleague: {}
     };
   },
   async mounted() {

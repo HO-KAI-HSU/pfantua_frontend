@@ -96,7 +96,7 @@ header{
 }
 header .wrapper{
     position: absolute;
-    z-index: 100;
+    z-index: 20;
 	overflow: visible;
 	/* padding: 0 20px; */
 }
@@ -2248,6 +2248,7 @@ header .nav_close{
   }
 
   #index .sectionCollageInfoDepartmentColleague .section-head-container .section-head-card-info .head-card-container {
+	position: relative;
 	max-width: 500px;
 	height: 334px;
 	margin: 0px 0px 50px 0;
@@ -2255,6 +2256,7 @@ header .nav_close{
 	object-fit: contain;
 	border-radius: 0% 0% 13% 0% / 0% 0% 13% 0%;
 	box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+	z-index: 50;
 	background-color: #fff;
   }
 
@@ -2313,8 +2315,161 @@ header .nav_close{
   #index .sectionCollageInfoDepartmentColleague .section-head-container .section-head-card-info .head-card-container .content .phone {
 	font-weight: bold;
   } 
-  
 
+/*[collage->DepartmentList]=========*/
+#index .sectionCollageDepartment {
+	position: relative;
+}
+#index .sectionCollageDepartment .wrapper{
+	margin: 0px 0px 0px 0px;
+	max-width: 1920px;
+	padding: 0 0 0;
+}
+#index .sectionCollageDepartment .wrapper-gap{
+	width: 500px;
+	height: 100px;
+	color: #fff;
+}
+#index .sectionCollageDepartment .section-title-line1{
+	width: 42px;
+	height: 1px;
+	margin: 200px 29.5px 30px 18.5px;
+	object-fit: contain;
+	background-color: #9d232f;
+}
+#index .sectionCollageDepartment .section-title{
+	width: 161px;
+	height: 30px;
+	margin: 30px 29.5px 30px 18.5px;
+	object-fit: contain;
+	font-size: 40px;
+	font-weight: normal;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: normal;
+	letter-spacing: normal;
+	text-align: left;
+	color: #000;
+}
+#index .sectionCollageDepartment .section-title-line2{
+	width: 1px;
+	height: 45px;
+	margin: 30px 29.5px 0 18.5px;
+	object-fit: contain;
+	background-color: #9d232f;
+}
+#index .sectionCollageDepartment .section-title-ellipse{
+	width: 8px;
+	height: 8px;
+	margin: 0 29.5px 30px 18.5px;
+	object-fit: contain;
+	background-color: #9d232f;
+}
+#index .sectionCollageDepartment .section-background {
+	position: relative;
+	z-index: 20;
+	object-fit: contain;
+	padding: 50px 60px 0px 60px;
+	border: solid 1px #f8f8f8;
+	background-color: #f8f8f8;
+}
+
+
+#index .sectionCollageDepartment .section-nav {
+	width: 119px;
+	height: 22px;
+	margin: 0px 274px 100px 0;
+	object-fit: contain;
+	font-family: HelveticaNeue;
+	font-size: 16px;
+	font-weight: normal;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: normal;
+	letter-spacing: normal;
+	text-align: left;
+	color: #707070;
+  }
+  #index .sectionCollageDepartment .section-nav .title-name {
+	color: #6a2525;
+  }
+
+  #index .sectionCollageDepartment .section-banner {
+	margin: 0px 0 0 0;
+  }
+
+  #index .sectionCollageDepartment .section-banner .banner-img {
+	width: 1300px;
+	height: 830px;
+	object-fit: contain;
+  }
+
+  #index .sectionCollageDepartment .section-banner .banner-block {
+	width: 90px;
+	height: 810px;
+	margin: 34px 0 100px 1px;
+	object-fit: contain;
+	background-color: #9d232f;
+  }
+
+  #index .sectionCollageDepartment .section-banner .banner-background {
+	width: 1210px;
+	height: 830px;
+	margin: 34px 0.5px 101px 0;
+	object-fit: contain;
+	border-radius: 0% 23% 23% 0% / 0% 23% 23% 0%; 
+  }
+
+  #index .sectionCollageDepartment .section-title-info {
+	margin: 50px 0 0px 0;
+  }
+
+  #index .sectionCollageDepartment .section-title-info .section-title {
+	width: 116px;
+	height: 41px;
+	margin: 100px 15px 71px 0;
+	object-fit: contain;
+	font-family: NotoSans;
+	font-size: 29px;
+	font-weight: bold;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 1.52;
+	letter-spacing: normal;
+	text-align: left;
+	color: #9d232f;
+  }
+
+  #index .sectionCollageDepartment .section-title-info .section-title-line {
+	width: 1000px;
+	height: 1px;
+	margin: 25px 0 0px 29.5px;
+	object-fit: contain;
+	background-color: #cb8e95;
+  }
+
+  #index .sectionCollageDepartment .section-content {
+	position: relative;
+	z-index: 10;
+	max-width: 1000px;
+	height: 300px;
+	margin: 0px 0px 50px 0px;
+	object-fit: contain;
+	font-family: NotoSans;
+	font-size: 24px;
+	font-weight: bold;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 2;
+	letter-spacing: normal;
+	text-align: left;
+	border-radius: 0% 0% 30% 0% / 0% 0% 30% 0%;
+	box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16), inset 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+	border: solid 1px #707070;
+	background-color: #fff;
+	color: #434343;
+  }
+  
 /*=[news]=========*/
 #news .section2{
 	position: relative;

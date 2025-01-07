@@ -183,7 +183,9 @@ export default {
     getAllDepartmentColleagues() {
         return this.get('/pfantua/public/frontend/api/allDepartmentColleagues');
     },
-
+    getCollageDepartmentList() {
+        return this.get('/pfantua/public/frontend/api/collageDepartments');
+    },
     notFound() {
         return router.push('/404');
     },

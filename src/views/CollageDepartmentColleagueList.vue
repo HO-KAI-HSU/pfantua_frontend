@@ -84,11 +84,18 @@ export default {
     return {
       Ready: false,
       DepartmentColleagues: [],
+      PositionType: ['professor', 'associate-professor', 'assistant-professor', 'lecturer', 'assistant', 'administrative-staff'],
+      PositionTypeTw: ['教授', '副教授', '助理教授', '講師', '助理', '行政人員'],
     };
   },
   async mounted() {
     var response = await this.$api.getAllDepartmentColleagues();
-    this.DepartmentColleagues = response;
+    response.forEach((i) => {
+      i.CollageColleagues.forEach((j) => {
+        j.PositionType = this.PositionTypeTw[this.PositionType.indexOf(j.PositionType)];
+      });
+      this.DepartmentColleagues.push(i);
+    });
     this.Ready = true;
   },
 };
