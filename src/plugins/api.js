@@ -186,6 +186,9 @@ export default {
     getCollageDepartmentList() {
         return this.get('/pfantua/public/frontend/api/collageDepartments');
     },
+    getRegulationsList() {
+        return this.get('/pfantua/public/frontend/api/regulations');
+    },
     notFound() {
         return router.push('/404');
     },

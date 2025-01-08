@@ -1393,6 +1393,113 @@ header .nav_close{
 	color: #fff;
   }
 
+/* --Download--------------------------------- */
+.download_box, .news_box {
+    background: url(../images/texture_pattern.png) repeat;
+    padding: 24px 0 100px 0;
+    position: relative;
+    width: 100%;
+}
+
+ul.fixed_btn_box {
+    bottom: 24px;
+    position: fixed;
+    right: 20px;
+    z-index: 1000;
+}
+
+    ul.fixed_btn_box li img {
+        cursor: pointer;
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+.news_detail_box, .doc_rule_regular, .rule_box {
+    background: #fff;
+    border-radius: 22px;
+    box-shadow: rgba(0,0,0,.1) 0px 4px 12px;
+    letter-spacing: 1px;
+    margin-top: 35px;
+    padding: 44px;
+    width: 100%;
+}
+
+    .doc_rule_regular:last-child {
+        margin-top: 34px;
+    }
+
+    .doc_rule_regular h3, .rule_text h3 {
+        color: #2d2a28;
+        font-size: 26px;
+        font-weight: 600;
+    }
+
+.download_box table {
+    border: none;
+    border-collapse: collapse;
+    margin-top: 24px;
+    width: 100%;
+}
+
+    .download_box table tr {
+        color: #2d2a28;
+    }
+
+        .download_box table tr:nth-child(odd) {
+            background: #fee9e0ed;
+        }
+
+.green_rule table tr:nth-child(odd) {
+    background: #e7f6f4;
+}
+
+.download_box table td {
+    padding: 16px 32px;
+}
+
+    .download_box table td.doc_rule_text {
+        color: #2d2a28;
+        font-size: 16px;
+        font-weight: 600;
+        width: 85%;
+    }
+
+    .download_box table td.doc_rule_btn {
+        width: 15%;
+    }
+
+a.blue_btn, a.green_btn {
+    border-radius: 28px;
+    color: #fff;
+    display: block;
+    float: right;
+    font-size: 16px;
+    font-weight: 600;
+    opacity: 1;
+    padding: 16px;
+    text-align: center;
+    text-decoration: none;
+    width: 170px;
+}
+
+a.blue_btn {
+    background: #f73b02c9;
+}
+
+a.green_btn {
+    background: #3cb9a1;
+}
+
+    a.blue_btn:hover, a.green_btn:hover {
+        opacity: .7;
+        transition: .4s opacity ease-in-out;
+    }
+
+img.btn_icon {
+    float: right;
+    height: auto;
+}
+
 /*[collageInfo]=========*/
 #index .sectionCollageInfo{
 	position: relative;
@@ -2463,9 +2570,9 @@ header .nav_close{
 	line-height: 2;
 	letter-spacing: normal;
 	text-align: left;
-	border-radius: 0% 0% 30% 0% / 0% 0% 30% 0%;
+	border-radius: 0% 0% 10% 10% / 0% 0% 10% 10%;
 	box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16), inset 0 3px 6px 0 rgba(0, 0, 0, 0.16);
-	border: solid 1px #707070;
+	border: solid 1px #fff8f8;
 	background-color: #fff;
 	color: #434343;
   }

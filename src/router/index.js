@@ -70,6 +70,12 @@ const routes = [
     meta: { title: '活動資訊內容-台灣藝術大學藝術學院'},
     component: () => import('../views/Activity.vue'),
   },
+  {
+    path: '/regulation',
+    name: 'Regulation',
+    meta: { title: '法規章程-台灣藝術大學藝術學院'},
+    component: () => import('../views/Regulation.vue'),
+  },
   { 
     path: '/:pathMatch(.*)*', 
     name: 'NotFound',
