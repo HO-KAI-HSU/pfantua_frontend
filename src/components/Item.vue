@@ -1,61 +1,42 @@
 <template>
   <div class="item-container">
-    <div class="title-wrapper" :style="style">{{ title }}</div>
-    <div class="content-wrapper">{{ content }} </div>
+    <a :href="link" target="_blank">
+      <div class="title-wrapper" :style="style">{{ title }}</div>
+      <div class="content-wrapper">{{ content }} </div>
+    </a>
   </div>
 </template>
 <script>
 
 export default {
   props: [
+    "outerLink",
     "title",
     "content",
     "type"
   ],
   computed: {
+    link() {
+      console.log(this.outerLink);
+      return this.outerLink;
+    },
     style() {
       if (this.type === 'student') {
         return {
-          backgroundColor: 'red'
+          backgroundColor: '#ccbe97'
         }
       }
       if (this.type === 'special') {
         return {
-          backgroundColor: 'purple'
+          backgroundColor: '#2f1b53'
         }
       }
-
-      return {
-        backgroundColor: 'red'
+      if (this.type === 'normal') {
+        return {
+          backgroundColor: '#9d232f'
+        }
       }
     }
   }
 };
 </script>
-<style scoped lang="sass">
-.item-container {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-}
-.title-wrapper {
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  display: flex;
-  padding: 4px 16px;
-  background-color: red;
-  color: white;
-}
-.content-wrapper {
-  display: flex;
-  border-radius: 0px 0px 0px 64px;
-  border: 1px solid #707070;
-  margin-top: 16px;
-  padding: 42px 24px;
-  max-width: 620px;
-  max-height: 165px;
-  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16), inset 0 3px 6px 0 rgba(0, 0, 0, 0.16);
-}
-</style>

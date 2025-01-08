@@ -189,6 +189,12 @@ export default {
     getRegulationsList() {
         return this.get('/pfantua/public/frontend/api/regulations');
     },
+    getRelatedResourceCategoryList() {
+        return this.get('/pfantua/public/frontend/api/relatedResourceCategories');
+    },
+    getRelatedResourceList(page, limit) {
+        return this.get('/pfantua/public/frontend/api/relatedResources?page=' + page + '&limit=' + limit);
+    },
     notFound() {
         return router.push('/404');
     },
