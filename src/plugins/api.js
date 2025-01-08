@@ -195,6 +195,9 @@ export default {
     getRelatedResourceList(page, limit) {
         return this.get('/pfantua/public/frontend/api/relatedResources?page=' + page + '&limit=' + limit);
     },
+    getCollageHeadElectionInfo() { 
+        return this.get('/pfantua/public/frontend/api/collageHeadElection');
+    },
     notFound() {
         return router.push('/404');
     },

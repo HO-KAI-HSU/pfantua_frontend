@@ -82,6 +82,12 @@ const routes = [
     meta: { title: '相關資源'},
     component: () => import('../views/RelatedResource.vue'),
   },
+  {
+    path: '/collageHeadElection',
+    name: 'CollageHeadElection',
+    meta: { title: '院長遴選'},
+    component: () => import('../views/CollageHeadElection.vue'),
+  },
   { 
     path: '/:pathMatch(.*)*', 
     name: 'NotFound',
