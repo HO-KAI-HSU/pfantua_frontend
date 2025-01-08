@@ -139,6 +139,7 @@ export default {
   },
   async mounted() {
     var relatedResourceCategories = await this.$api.getRelatedResourceCategoryList();
+    localStorage.setItem("relatedResourceCategories", JSON.stringify(relatedResourceCategories))
     var relatedResources = await this.$api.getRelatedResourceList(1, 10);
     this.list = relatedResources.RelatedResourceList.map((resource) => {
       return {
@@ -156,7 +157,7 @@ export default {
   },
   methods: {
     async getListBySwitchPage(nowPage) {
-      var relatedResourceCategories = await this.$api.getRelatedResourceCategoryList();
+      var relatedResourceCategories = JSON.parse(localStorage.getItem("relatedResourceCategories"));
       var relatedResources = await this.$api.getRelatedResourceList(nowPage, 10);
       this.list = relatedResources.RelatedResourceList.map((resource) => {
         return {
