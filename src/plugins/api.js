@@ -198,6 +198,12 @@ export default {
     getCollageHeadElectionInfo() { 
         return this.get('/pfantua/public/frontend/api/collageHeadElection');
     },
+    isActiveCollageHeadElection() { 
+        return this.get('/pfantua/public/frontend/api/isActiveCollageHeadElection');
+    },
+    getCollageCourseList(page, limit) { 
+        return this.get('/pfantua/public/frontend/api/collageCourses?page=' + page + '&limit=' + limit);
+    },
     notFound() {
         return router.push('/404');
     },

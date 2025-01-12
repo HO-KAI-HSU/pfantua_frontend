@@ -26,14 +26,19 @@ export default {
           backgroundColor: '#ccbe97'
         }
       }
-      if (this.type === 'special') {
+      else if (this.type === 'special') {
         return {
           backgroundColor: '#2f1b53'
         }
       }
-      if (this.type === 'normal') {
+      else if (this.type === 'normal') {
         return {
           backgroundColor: '#9d232f'
+        }
+      }
+      else {
+        return {
+          backgroundColor: '#007bff'
         }
       }
     }

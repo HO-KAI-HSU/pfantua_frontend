@@ -23,28 +23,31 @@
 							<a href="javascript:;" class="nav_close mobile" id="nav_close">x 關閉</a>
 							<ul>
 								<li>
-                  <router-link to="/collageInfo" title="點擊可進入關於本院"><img src="img/index_img/4.png" srcset="img/index_img/4@2x.png 2x, img/index_img/4@3x.png 3x" class="menuitem"></router-link>
+                  <router-link to="/collageInfo" title="點擊可進入關於本院">
+                    <span class="menuitem">關於本院</span>
+                    <div class="line1"></div>
+                  </router-link>
                 </li>
 								<li>
-                  <router-link to="/newsList" title="點擊可進入最新消息"><img src="img/index_img/5.png" srcset="img/index_img/5@2x.png 2x, img/index_img/5@3x.png 3x" class="menuitem"></router-link>
+                  <router-link to="/newsList" title="點擊可進入最新消息"><span class="menuitem">最新消息</span></router-link>
                 </li>
 								<li>
-                  <router-link to="/activityList" title="點擊可進入活動資訊"><img src="img/index_img/5.png" srcset="img/index_img/5@2x.png 2x, img/index_img/5@3x.png 3x" class="menuitem"></router-link>
+                  <router-link to="/activityList" title="點擊可進入活動資訊"><span class="menuitem">活動資訊</span></router-link>
                 </li>
 								<li>
-                  <router-link to="/collageDepartmentList" title="點擊可進入系所單位"><img src="img/index_img/8.png" srcset="img/index_img/8@2x.png 2x, img/index_img/8@3x.png 3x" class="menuitem"></router-link>
+                  <router-link to="/collageDepartmentList" title="點擊可進入系所單位"><span class="menuitem">系所單位</span></router-link>
                 </li>
                 <li>
-                  <router-link to="/collageCourse" title="點擊可進入學院課程"><img src="img/index_img/9.png" srcset="img/index_img/9@2x.png 2x, img/index_img/9@3x.png 3x" class="menuitem"></router-link>
+                  <router-link to="/collageCourse" title="點擊可進入學院課程"><span class="menuitem">學院課程</span></router-link>
                 </li>
                 <li>
-                  <router-link to="/regulation" title="點擊可進入法規章程"><img src="img/index_img/invalid-name.png" srcset="img/index_img/invalid-name@2x.png 2x, img/index_img/invalid-name@3x.png 3x" class="menuitem"></router-link>
+                  <router-link to="/regulation" title="點擊可進入法規章程"><span class="menuitem">法規章程</span></router-link>
                 </li>
                 <li>
-                  <router-link to="/relatedResource" title="點擊可進入相關資源"><img src="img/index_img/2.png" srcset="img/index_img/2@2x.png 2x, img/index_img/2@3x.png 3x" class="menuitem"></router-link>
+                  <router-link to="/relatedResource" title="點擊可進入相關資源"><span class="menuitem">相關資源</span></router-link>
                 </li>
-                <li>
-                  <router-link to="/collageHeadElection" title="點擊可進入院長遴選"><img src="img/index_img/3.png" srcset="img/index_img/3@2x.png 2x, img/index_img/3@3x.png 3x" class="menuitem"></router-link>
+                <li v-if="isActiveCollageHeadElection">
+                  <router-link to="/collageHeadElection" title="點擊可進入院長遴選"><span class="menuitem">院長遴選</span></router-link>
                 </li>
 							</ul>
 						</nav>
@@ -62,9 +65,14 @@ export default {
       LessonCatrgories: [],
       Keyword: "",
       TabIndexNo : -1,
+      isActiveCollageHeadElection : false,
     };
   },
   async mounted() {
+    var response = await this.$api.isActiveCollageHeadElection();
+    if (response.IsActive == "1") {
+      this.isActiveCollageHeadElection = true;
+    }
     this.setBase("home-wide");
     this.User = this.$user.user;
     this.$user.addOnUpdateHandler((user) => {

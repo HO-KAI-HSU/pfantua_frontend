@@ -88,6 +88,12 @@ const routes = [
     meta: { title: '院長遴選'},
     component: () => import('../views/CollageHeadElection.vue'),
   },
+  {
+    path: '/collageCourse',
+    name: 'CollageCourse',
+    meta: { title: '開課資訊-台灣藝術大學藝術學院'},
+    component: () => import('../views/CollageCourse.vue'),
+  },
   { 
     path: '/:pathMatch(.*)*', 
     name: 'NotFound',

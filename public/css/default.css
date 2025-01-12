@@ -93,7 +93,6 @@ header{
 	height: 10%;
 	left: 0;
 	top: 0;
-	background: #FFF;
 }
 header .wrapper{
     position: absolute;
@@ -101,15 +100,14 @@ header .wrapper{
 	overflow: visible;
 }
 header .logo{
-	width: 223px;
+	max-width: 223px;
     height: 58.3px;
-    margin: 36.7px 250px 7px 80px;
+    margin: 36.7px 200px 7px 80px;
 	object-fit: contain;
+
 }
-header .mainnav{
-	display: block;
-	margin: 40px 0 0;
-	text-align: right;
+header .mainnav {
+	margin: 55px 0 0px;
 }
 header .mainnav ul{
 	margin: 0;
@@ -118,7 +116,7 @@ header .mainnav ul{
 header .mainnav ul li{
 	position: relative;
 	display: inline-block;
-	padding: 0 0 20px;
+	padding: 0px 0 0px;
 }
 header .mainnav ul li a{
 	vertical-align: bottom;
@@ -128,13 +126,12 @@ header .mainnav ul li a{
 	font-weight: 500;
 }
 
-header .mainnav ul li a img.menuitem {
+header .mainnav ul li a .menuitem {
     width: 65px;
-    height: 18px;
-    margin: 22px 20px 7px;
+    height: 30px;
+    margin: 30px 20px 0px 20px;
     object-fit: contain;
     position: relative;
-    /* font-family: .AppleSystemUIFont; */
 	font-size: 16px;
 	font-weight: normal;
 	font-stretch: normal;
@@ -145,40 +142,19 @@ header .mainnav ul li a img.menuitem {
 	color: #fff;
 }
 
-header .mainnav ul li a:hover{
-	color: #bcc528;
-}
-header .mainnav ul li:hover > ul{display: block;}
-header .mainnav ul ul{
+header .mainnav .menuitem .line1 {
 	position: absolute;
-	top: 40px;
-	left: -10px;
-	width: 150px;
-	padding: 10px;
-	margin: auto;
-	box-sizing: border-box;
-	background: #FFF;
-	border: 1px #DDD solid;
-	display: none;
-	z-index: 10;
+	width: 65px;
+	height: 100px;
+	margin: 20px 20px 20px 20px;
+	background-color: #9d232f;
 }
-header .mainnav ul ul li{
-	display: block;
-	border: none;
-	padding: 10px;
-	text-align: left;
-}
-header .mainnav ul ul li a{
-	color: #707070;
-	padding: 0;
-	border: none;
-	font-size: 1.2em;
-	vertical-align: middle;
-}
-header .mainnav ul ul li a:hover{
+
+header .mainnav .menuitem:hover {
 	color: #bcc528;
 }
-header .nav_icon{
+
+header .nav_icon {
 	position: absolute;
 	top: 50px;
 	right: 20px;
@@ -186,13 +162,12 @@ header .nav_icon{
 	color: #FFF;
 	display: none;
 }
+
 header .nav_close{
 	display: none;
 }
 
 /*=[pagination]=========*/
-
-
 .section-pagination-wrap {
 	width: auto;
 	height: 33px;
@@ -602,7 +577,6 @@ header .nav_close{
 }
 #index .section7 .section-activity-item{
 	position: relative;
-	z-index: 10;
 	height: 500px;
 	margin: 0px 0px 0px 0px;
 	object-fit: contain;
@@ -868,14 +842,14 @@ header .nav_close{
 	object-fit: contain;
 	background-color: #9d232f;
 }
-#index .sectionActivityList .section-title-ellipse{
+#index .sectionActivityList .section-title-ellipse {
 	width: 8px;
 	height: 8px;
 	margin: 0 29.5px 30px 18.5px;
 	object-fit: contain;
 	background-color: #9d232f;
 }
-#index .sectionActivityList .section-background{
+#index .sectionActivityList .section-background {
 	object-fit: contain;
 	padding: 50px 60px 0px 60px;
 	border: solid 1px #f8f8f8;
@@ -910,19 +884,17 @@ header .nav_close{
 	margin: 20px 20px 20px 20px;
 }
 
-#index .sectionActivityList .section-item{
+#index .sectionActivityList .section-item {
 	position: relative;
-	z-index: 10;
 	height: 500px;
 	margin: 0px 0px 0px 0px;
-	/* padding: 0 0 82px; */
 	object-fit: contain;
 	border-radius: 0% 0% 0% 13% / 0% 0% 0% 13%;
 	box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16), inset 0 3px 6px 0 rgba(0, 0, 0, 0.16);
 	border: solid 1px #707070;
 	background-color: #f8f8f8;
 }
-#index .sectionActivityList .section-gap{
+#index .sectionActivityList .section-gap {
 	position: relative;
 	z-index: 10;
 	width: 50px;
@@ -1057,7 +1029,6 @@ header .nav_close{
 	height: 28px;
 	margin: 39px 0px 42px 0;
 	object-fit: contain;
-	/* font-family: .AppleSystemUIFont; */
 	font-size: 24px;
 	font-weight: normal;
 	font-stretch: normal;
@@ -1195,14 +1166,12 @@ header .nav_close{
 
 #index .sectionNewsList .section-item{
 	position: relative;
-	z-index: 10;
 	height: 500px;
 	margin: 0px 0px 0px 0px;
-	/* padding: 0 0 82px; */
 	object-fit: contain;
 	border-radius: 0% 0% 0% 13% / 0% 0% 0% 13%;
 	box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16), inset 0 3px 6px 0 rgba(0, 0, 0, 0.16);
-	border: solid 1px #707070;
+	border: solid 1px #f8f8f8;
 	background-color: #f8f8f8;
 }
 #index .sectionNewsList .section-gap{
@@ -2363,7 +2332,6 @@ img.btn_icon {
 	object-fit: contain;
 	border-radius: 0% 0% 13% 0% / 0% 0% 13% 0%;
 	box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
-	z-index: 50;
 	background-color: #fff;
   }
 
@@ -2474,7 +2442,6 @@ img.btn_icon {
 }
 #index .sectionCollageDepartment .section-background {
 	position: relative;
-	z-index: 20;
 	object-fit: contain;
 	padding: 50px 60px 0px 60px;
 	border: solid 1px #f8f8f8;
@@ -2554,7 +2521,6 @@ img.btn_icon {
 
   #index .sectionCollageDepartment .section-content {
 	position: relative;
-	z-index: 10;
 	max-width: 1000px;
 	height: 300px;
 	margin: 0px 0px 50px 0px;
@@ -2626,7 +2592,6 @@ img.btn_icon {
 }
 #index .sectionRelatedResource .section-background {
 	position: relative;
-	z-index: 20;
 	object-fit: contain;
 	padding: 50px 60px 0px 60px;
 	border: solid 1px #f8f8f8;
@@ -2673,7 +2638,6 @@ img.btn_icon {
 	}
 	#index .sectionRelatedResource .title-wrapper {
 		position: absolute;
-		z-index: 20;
 		top: 0;
 		left: 0;
 		display: flex;
@@ -2682,6 +2646,122 @@ img.btn_icon {
 		color: white;
 	}
 	#index .sectionRelatedResource .content-wrapper {
+		display: flex;
+		border-radius: 0px 0px 0px 64px;
+		border: 1px solid #707070;
+		margin-top: 16px;
+		padding: 42px 24px;
+		max-width: 620px;
+		max-height: 165px;
+		box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16), inset 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+		color: #000;
+	}
+
+/*[CollageCourse]=========*/
+#index .sectionCollageCourse {
+	position: relative;
+}
+#index .sectionCollageCourse .wrapper{
+	margin: 0px 0px 0px 0px;
+	max-width: 1920px;
+	padding: 0 0 0;
+}
+#index .sectionCollageCourse .wrapper-gap{
+	width: 500px;
+	height: 100px;
+	color: #fff;
+}
+#index .sectionCollageCourse .section-title-line1{
+	width: 42px;
+	height: 1px;
+	margin: 200px 29.5px 30px 18.5px;
+	object-fit: contain;
+	background-color: #9d232f;
+}
+#index .sectionCollageCourse .section-title{
+	width: 161px;
+	height: 30px;
+	margin: 30px 29.5px 30px 18.5px;
+	object-fit: contain;
+	font-size: 40px;
+	font-weight: normal;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: normal;
+	letter-spacing: normal;
+	text-align: left;
+	color: #000;
+}
+#index .sectionCollageCourse .section-title-line2{
+	width: 1px;
+	height: 45px;
+	margin: 30px 29.5px 0 18.5px;
+	object-fit: contain;
+	background-color: #9d232f;
+}
+#index .sectionCollageCourse .section-title-ellipse {
+	width: 8px;
+	height: 8px;
+	margin: 0 29.5px 30px 18.5px;
+	object-fit: contain;
+	background-color: #9d232f;
+}
+#index .sectionCollageCourse .section-background {
+	position: relative;
+	object-fit: contain;
+	padding: 50px 60px 0px 60px;
+	border: solid 1px #f8f8f8;
+	background-color: #f8f8f8;
+}
+
+
+#index .sectionCollageCourse .section-nav {
+	width: 119px;
+	height: 22px;
+	margin: 0px 274px 100px 0;
+	object-fit: contain;
+	font-family: HelveticaNeue;
+	font-size: 16px;
+	font-weight: normal;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: normal;
+	letter-spacing: normal;
+	text-align: left;
+	color: #707070;
+  }
+  #index .sectionCollageCourse .section-nav .title-name {
+	color: #6a2525;
+  }
+
+  #index .sectionCollageCourse .container {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 32px;
+	align-items: center;
+	justify-items: center;
+	padding: 64px;
+  
+	@media screen and (max-width: 768px) {
+	  grid-template-columns: 1fr;
+	}
+  }
+
+	#index .sectionCollageCourse .item-container {
+		display: flex;
+		flex-direction: column;
+		position: relative;
+	}
+	#index .sectionCollageCourse .title-wrapper {
+		position: absolute;
+		top: 0;
+		left: 0;
+		display: flex;
+		padding: 4px 16px;
+		background-color: red;
+		color: white;
+	}
+	#index .sectionCollageCourse .content-wrapper {
 		display: flex;
 		border-radius: 0px 0px 0px 64px;
 		border: 1px solid #707070;
@@ -3399,6 +3479,7 @@ label{
 }
 
 @media screen and (max-width: 1080px) {
+	.mobile{ display: block !important;}
 	#pageWrapper{
 		/* padding-top: 120px; */
 	}
