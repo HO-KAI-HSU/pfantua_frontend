@@ -33,28 +33,28 @@
           </div>
       </div>
       <div class="wrapper">
-          <div class="section-background">
-            <span class="section-nav">
-                首頁 > <span class="title-name">開課資訊</span>
-            </span>
+        <div class="section-background">
+          <span class="section-nav">
+              首頁 > <span class="title-name">學院課程</span>
+          </span>
+          <div class="container">
+            <Item 
+              v-for="item in list" 
+              :outerLink="item.outerLink"
+              :key="item.index" 
+              :title="item.title" 
+              :content="item.content"
+              :type="item.type"
+            />
           </div>
+          <Pagination 
+            :propsPage="Page" 
+            :propsLimit="Limit" 
+            :propsTotal="Total" 
+            @switchPage="getListBySwitchPage"
+          />
+        </div>
       </div>
-      <div class="container">
-        <Item 
-          v-for="item in list" 
-          :outerLink="item.outerLink"
-          :key="item.index" 
-          :title="item.title" 
-          :content="item.content"
-          :type="item.type"
-        />
-      </div>
-      <Pagination 
-        :propsPage="Page" 
-        :propsLimit="Limit" 
-        :propsTotal="Total" 
-        @switchPage="getListBySwitchPage"
-        />
     </div>
   </div>
 </template>

@@ -1,6 +1,6 @@
 <template>
   <div v-show="Ready" id="index">
-      <div class="sectionCollageInfo">
+      <div class="sectionFile">
           <div class="wrapper">
               <div class="w3-center">
               <img src="img/collage_img/line-3.png"
@@ -34,25 +34,25 @@
           </div>
           <div class="wrapper">
               <div class="section-background">
-              <span class="section-nav">
-                  首頁 > <span class="title-name">院長遴選</span>
-              </span>
+                <span class="section-nav">
+                    首頁 > <span class="title-name">院長遴選</span>
+                </span>
+                <section class="download_box">
+                    <div class="container">
+                        <div class="doc_rule_regular">
+                            <h3>{{ CollageHeadElection.Title }}</h3>
+                            <table>
+                                <tr v-for="file in CollageHeadElectionFiles">
+                                    <td class="doc_rule_text">{{ file.Name }}</td>
+                                    <td class="doc_rule_btn"><a class="blue_btn" :href="file.Url|imageCDN" target="_blank">立即下載</a></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </section>
               </div>
           </div>
       </div>
-      <section class="download_box">
-      <div class="container">
-          <div class="doc_rule_regular">
-              <h3>{{ CollageHeadElection.Title }}</h3>
-              <table>
-                  <tr v-for="file in CollageHeadElectionFiles">
-                      <td class="doc_rule_text">{{ file.Name }}</td>
-                      <td class="doc_rule_btn"><a class="blue_btn" :href="file.Url" target="_blank">立即下載</a></td>
-                  </tr>
-              </table>
-          </div>
-      </div>
-  </section>
   </div>
 </template>
 <script>

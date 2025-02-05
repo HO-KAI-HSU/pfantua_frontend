@@ -33,6 +33,27 @@
         </div>
       </div>
       <div class="wrapper">
+        <div class="w3-center">
+          <div class="collageInfo-tabs">
+            <router-link to="#" v-scroll-to="'#info'" class="courseStudentPage" title="點擊可跳至學院簡介">
+              <span class="tabs-name">學院簡介</span>
+            </router-link>
+            <router-link to="#" v-scroll-to="'#history'" class="courseStudentPage" title="點擊可跳至院景沿革">
+              <span class="tabs-name">院景沿革</span>
+            </router-link>
+            <router-link to="#" v-scroll-to="'#newHead'" class="courseStudentPage" title="點擊可跳至現任院長">
+              <span class="tabs-name">現任院長</span>
+            </router-link>
+            <router-link to="#" v-scroll-to="'#oldHead'" class="courseStudentPage" title="點擊可跳至歷屆院長">
+              <span class="tabs-name">歷屆院長</span>
+            </router-link>
+            <router-link to="/collageDepartmentColleagueList" class="courseStudentPage" title="點擊可跳至師資陣容">
+              <span class="tabs-name">師資陣容</span>
+            </router-link>
+          </div>
+        </div>
+      </div>
+      <div class="wrapper">
         <div class="section-background">
           <span class="section-nav">
             首頁 > <span class="title-name">關於本院</span>
@@ -45,7 +66,7 @@
             <img :src="Collage.CollageImageUrl|imageCDN" alt="學院簡介主圖片"
               class="banner-background">
           </div>
-          <div class='section-title-info'>
+          <div class='section-title-info' id="info">
             <span class="section-title">
               學院簡介
             </span>
@@ -58,7 +79,7 @@
             <span class="section-content" v-html="CollageIntroduction">
             </span>
           </div>
-          <div class='section-title-info'>
+          <div class='section-title-info' id="history">
             <span class="section-title">
               院景沿革
             </span>
@@ -71,7 +92,7 @@
             <span class="section-content" v-html="CollageHistory">
             </span>
           </div>
-          <div class='section-title-info'>
+          <div class='section-title-info' id="newHead">
             <span class="section-title">
               現任院長
             </span>
@@ -105,7 +126,7 @@
               </div>
             </div>
           </div>
-          <div class='section-title-info'>
+          <div class='section-title-info' id="oldHead">
             <span class="section-title">
               歷任院長
             </span>

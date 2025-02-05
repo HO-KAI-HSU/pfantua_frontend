@@ -35,6 +35,9 @@
                   <router-link to="/activityList" title="點擊可進入活動資訊"><span class="menuitem">活動資訊</span></router-link>
                 </li>
 								<li>
+                  <router-link to="/activityHistoryList" title="點擊可進入活動集錦"><span class="menuitem">活動集錦</span></router-link>
+                </li>
+								<li>
                   <router-link to="/collageDepartmentList" title="點擊可進入系所單位"><span class="menuitem">系所單位</span></router-link>
                 </li>
                 <li>

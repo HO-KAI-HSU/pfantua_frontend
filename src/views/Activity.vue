@@ -12,7 +12,7 @@
       <div class="wrapper">
         <div class="w3-center">
           <span class="section-title">
-            活動內容
+            活動資訊
           </span>
         </div>
       </div>

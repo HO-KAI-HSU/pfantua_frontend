@@ -66,7 +66,9 @@
                 <div class="section-activity-item">
                   <img :src="activity.ImageUrl|imageCDN" alt="活動資訊主圖片"
                     class="section-activity-item-img">
-                  </br></br>
+                  </br>
+                  <span class="section-activity-item-date">{{ activity.NewsTime }}</span>
+                  </br>
                   <span class="section-activity-item-title">{{ activity.Title }}</span>
                 </div>
               </router-link>
@@ -75,10 +77,10 @@
         </div>
       </div>
       <div class="wrapper">
-        <div class="w3-center">
+        <div class="more-container">
           <router-link to="/activityList" title="點擊可進入活動資訊列表">
             <div class="section-more-btn">
-              <span class="section-more-title">詳細內容</span>
+              <span class="section-more-title">更多內容</span>
             </div>
           </router-link>
         </div>
@@ -135,7 +137,7 @@
         </div>
       </div>	
       <div class="wrapper">
-        <div class="w3-center">
+        <div class="more-container">
           <router-link to="/newsList" title="點擊可進入最新消息列表">
             <div class="section-more-btn">
                 <span class="section-more-title">更多內容</span>
@@ -168,7 +170,16 @@ export default {
     this.CollageDepartmentList = response.CollageDepartmentList;
     this.ActivityList = response.ActivityList;
     this.NewsList = response.NewsList;
+
+    this.$nextTick(() => {
+      $(".mainSlide").slick({
+        arrows: false,
+        autoplay: true,
+      });
+    });
+
     this.Ready = true;
+    this.loadCustomJs();
   },
   methods: {
   },

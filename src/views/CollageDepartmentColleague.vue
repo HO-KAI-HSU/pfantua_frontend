@@ -12,7 +12,7 @@
       <div class="wrapper">
         <div class="w3-center">
           <span class="section-title">
-            師資內容
+            師資陣容
           </span>
         </div>
       </div>
@@ -35,7 +35,7 @@
       <div class="wrapper">
         <div class="section-background">
           <span class="section-nav">
-            首頁 > 師資陣容 > <span class="title-name">師資內容</span>
+            首頁 > 關於本院 > <span class="title-name">師資陣容</span>
           </span>
         </div>
         <div class="section-head-title-info">

@@ -1,6 +1,6 @@
 <template>
     <div v-show="Ready" id="index">
-        <div class="sectionCollageInfo">
+        <div class="sectionFile">
             <div class="wrapper">
                 <div class="w3-center">
                 <img src="img/collage_img/line-3.png"
@@ -34,25 +34,25 @@
             </div>
             <div class="wrapper">
                 <div class="section-background">
-                <span class="section-nav">
-                    首頁 > <span class="title-name">法規章程</span>
-                </span>
+                    <span class="section-nav">
+                        首頁 > <span class="title-name">法規章程</span>
+                    </span>
+                    <section class="download_box">
+                        <div class="container">
+                            <div class="doc_rule_regular">
+                                <h3>法規章程文件下載</h3>
+                                <table>
+                                    <tr v-for="regulation in Regulations">
+                                        <td class="doc_rule_text">{{ regulation.Title }}</td>
+                                        <td class="doc_rule_btn"><a class="blue_btn" :href="regulation.FileUrl|imageCDN" target="_blank">立即下載</a></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </section>
                 </div>
             </div>
         </div>
-        <section class="download_box">
-        <div class="container">
-            <div class="doc_rule_regular">
-                <h3>法規章程文件下載</h3>
-                <table>
-                    <tr v-for="regulation in Regulations">
-                        <td class="doc_rule_text">{{ regulation.Title }}</td>
-                        <td class="doc_rule_btn"><a class="blue_btn" :href="regulation.FileUrl" target="_blank">立即下載</a></td>
-                    </tr>
-                </table>
-            </div>
-        </div>
-    </section>
     </div>
 </template>
 <script>

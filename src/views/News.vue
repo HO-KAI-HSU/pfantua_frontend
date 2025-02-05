@@ -12,7 +12,7 @@
       <div class="wrapper">
         <div class="w3-center">
           <span class="section-title">
-            消息內容
+            最新消息
           </span>
         </div>
       </div>

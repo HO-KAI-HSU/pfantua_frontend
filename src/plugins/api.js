@@ -174,6 +174,12 @@ export default {
     getActivityList(page, limit) {
         return this.get('/pfantua/public/frontend/api/newsList/3?page=' + page + '&limit=' + limit);
     },
+    getActivityHistoryList(page, limit) {
+        return this.get('/pfantua/public/frontend/api/activityHistorys?page=' + page + '&limit=' + limit);
+    },
+    getActivityHistoryInfo(id) {
+        return this.get('/pfantua/public/frontend/api/activityHistory/' + id);
+    }, 
     getCollageInfo() {
         return this.get('/pfantua/public/frontend/api/collageInfo');
     },
