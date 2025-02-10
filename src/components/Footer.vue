@@ -40,10 +40,10 @@
 						</div>
 						<div class="item-contact">
 							<a href="https://www.facebook.com/groups/973735224572452?locale=zh_TW" title="點擊前往fb" target="_blank">
-								<img src="img/index_img/fb.png">
+								<img src="img/index_img/fb.png" class="image">
 							</a>
 							<a href="https://www.youtube.com/@nationaltaiwanuniversityof7195" title="點擊前往youtube" target="_blank">
-								<img src="img/index_img/youtube.png">
+								<img src="img/index_img/youtube.png" class="image">
 							</a>
 						</div>
 					</div>
@@ -91,10 +91,10 @@
 					<div class="w3-col m12">
 						<div class="item-contact">
 							<a href="https://www.facebook.com/groups/973735224572452?locale=zh_TW" title="點擊前往fb" target="_blank">
-								<img src="img/index_img/fb.png">
+								<img src="img/index_img/fb.png" class="image">
 							</a>
 							<a href="https://www.youtube.com/@nationaltaiwanuniversityof7195" title="點擊前往youtube" target="_blank">
-								<img src="img/index_img/youtube.png">
+								<img src="img/index_img/youtube.png" class="image">
 							</a>
 						</div>
 					</div>

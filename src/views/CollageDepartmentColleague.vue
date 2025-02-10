@@ -37,42 +37,42 @@
           <span class="section-nav">
             首頁 > 關於本院 > <span class="title-name">師資陣容</span>
           </span>
-        </div>
-        <div class="section-head-title-info">
-          <div class="w3-col">
-            <div class="section-banner">
-              <img src="img/collage_img/rectangle-114.png"
-                srcset="img/collage_img/rectangle-114@2x.png 2x,
-                        img/collage_img/rectangle-114@3x.png 3x"
-                class="banner-block">
-              <img :src="CollageColleague.ImageUrl|imageCDN" alt="師資主圖片"
-                class="banner-background">
+          <div class="section-head-title-info">
+            <div class="w3-col">
+              <div class="section-banner">
+                <img src="img/collage_img/rectangle-114.png"
+                  srcset="img/collage_img/rectangle-114@2x.png 2x,
+                          img/collage_img/rectangle-114@3x.png 3x"
+                  class="banner-block">
+                <img :src="CollageColleague.ImageUrl|imageCDN" alt="師資主圖片"
+                  class="banner-background">
+              </div>
+            </div>
+            <div class="w3-col">
+              <div class="section-title-info">
+                <span class="name">
+                  {{ CollageColleague.Name }}
+                </span>
+                <span class="positionType">現職|</span>
+                <span class="content" v-html="CollageColleague.Title">
+                </span>
+              </div>
             </div>
           </div>
-          <div class="w3-col">
-            <div class="section-title-info">
-              <span class="name">
-                {{ CollageColleague.Name }}
+          <div class="section-head-content">
+            <div class='section-title-info'>
+              <span class="section-title">
+                師資簡介
               </span>
-              <span class="positionType">現職|</span>
-              <span class="content" v-html="CollageColleague.Title">
+              <img src="img/collage_img/line-19.png"
+                srcset="img/collage_img/line-19@2x.png 2x,
+                        img/collage_img/line-19@3x.png 3x"
+                class="section-title-line">
+            </div>
+            <div class='section-content-container'>
+              <span class="section-content" v-html="CollageColleague.Content">
               </span>
             </div>
-          </div>
-        </div>
-        <div class="section-head-content">
-          <div class='section-title-info'>
-            <span class="section-title">
-              師資簡介
-            </span>
-            <img src="img/collage_img/line-19.png"
-              srcset="img/collage_img/line-19@2x.png 2x,
-                      img/collage_img/line-19@3x.png 3x"
-              class="section-title-line">
-          </div>
-          <div class='section-content-container'>
-            <span class="section-content" v-html="CollageColleague.Content">
-            </span>
           </div>
         </div>
       </div>

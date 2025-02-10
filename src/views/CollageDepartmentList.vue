@@ -37,30 +37,21 @@
           <span class="section-nav">
             首頁 > <span class="title-name">系所單位</span>
           </span>
-
-          <div v-for="(department, index) in CollageDepartments">
-            <a :href="department.CollageDepartmentLinkUrl" target="_blank" :title="department.CollageDepartmentName" >
+          <div class="collageDepartments" v-for="(department, index) in CollageDepartments">
+            <a :href="department.CollageDepartmentLinkUrl" target="_blank" :title="department.CollageDepartmentName" >       
               <div class="section-head-title-info" :key="department.CollageDepartmentCode">
-                <div class="w3-col">
-                  <div class="section-banner">
-                    <img src="img/collage_img/rectangle-114.png"
-                      srcset="img/collage_img/rectangle-114@2x.png 2x,
-                              img/collage_img/rectangle-114@3x.png 3x"
-                      class="banner-block">
-                    <img :src="department.ImageUrl|imageCDN" alt="系所主圖片"
-                      class="banner-background">
-                  </div>
+                <div class="section-banner">
+                  <img :src="department.ImageUrl|imageCDN" alt="系所主圖片"
+                    class="banner-background">
                 </div>
-                <div class="w3-col">
-                  <div class="section-title-info">
-                    <span class="name">
-                      {{ department.Name }}
-                    </span>
-                    <span class="positionType">系所簡介 : </span>
-                    <span class="content">
-                      {{ department.Content }}
-                    </span>
-                  </div>
+                <div class="section-title-info">
+                  <span class="name">
+                    {{ department.Name }}
+                  </span>
+                  <br>
+                  <span class="content">
+                    {{ department.Content }}
+                  </span>
                 </div>
               </div>
             </a> 

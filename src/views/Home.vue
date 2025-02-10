@@ -67,9 +67,11 @@
                   <img :src="activity.ImageUrl|imageCDN" alt="活動資訊主圖片"
                     class="section-activity-item-img">
                   </br>
-                  <span class="section-activity-item-date">{{ activity.NewsTime }}</span>
-                  </br>
-                  <span class="section-activity-item-title">{{ activity.Title }}</span>
+                  <div class="section-activity-item-content">
+                    <span class="section-activity-item-date">{{ activity.NewsTime }}</span>
+                    </br>
+                    <span class="section-activity-item-title">{{ activity.Title }}</span>
+                  </div>
                 </div>
               </router-link>
             </div>

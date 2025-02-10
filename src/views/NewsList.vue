@@ -45,9 +45,11 @@
                     <img :src="news.ImageUrl|imageCDN" alt="最新消息主圖片"
                       class="section-item-img">
                       </br>
-                      <span class="section-item-date">{{ news.NewsTime }}</span>
-                      </br>
-                      <span class="section-item-title">{{ news.Title }}</span>
+                      <div class="section-news-item-content">
+                        <span class="section-item-date">{{ news.NewsTime }}</span>
+                        </br>
+                        <span class="section-item-title">{{ news.Title }}</span>
+                      </div>
                   </div>
                 </router-link>
               </div>

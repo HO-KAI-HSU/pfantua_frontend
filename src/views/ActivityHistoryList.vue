@@ -45,9 +45,11 @@
                     <img src="img/index_img/4-0-2@2x.png" alt="活動集錦主圖片"
                       class="section-item-img">
                       </br>
-                      <span class="section-item-date">{{ activity.CreateTime | dateFormat }}</span>
-                      </br>
-                      <span class="section-item-title">{{ activity.Title }}</span>
+                      <div class="section-item-content">
+                        <span class="section-item-date">{{ activity.CreateTime | dateFormat }}</span>
+                        </br>
+                        <span class="section-item-title">{{ activity.Title }}</span>
+                      </div>
                   </div>
                 </router-link>
               </div>
