@@ -3,7 +3,9 @@
     <div class="slideLogin">
       <div class="mainSlide">
           <div class="slide" v-for="b in BannerList" :key="b.BannerID">
-            <a :href="b.TargetUrl" target="_blank" tltle="Banner資訊連結"><img :src="b.ImageUrl | imageCDN" alt="課程主圖圖示(另開新視窗)"/></a>
+            <a :href="b.TargetUrl" target="_blank" tltle="Banner資訊連結">
+              <img :src="b.ImageUrl | imageCDN" alt="課程主圖圖示(另開新視窗)" class="img"/>
+            </a>
           </div>
       </div>
     </div>

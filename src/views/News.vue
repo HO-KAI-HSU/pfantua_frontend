@@ -1,6 +1,6 @@
 <template>
   <div v-show="Ready" id="index">
-    <div class="sectionNews">
+    <div class="sectionActivity">
       <div class="wrapper">
         <div class="w3-center">
           <img src="img/index_img/line-3.png"
@@ -37,30 +37,30 @@
           <span class="section-nav">
             首頁 > 最新消息 > <span class="title-name">消息內容</span>
           </span>
-        </div>
-        <div class="w3-col" style="width:45%">
-          <img :src="News.ImageUrl|imageCDN" alt="最新消息主圖片"
-            class="image">
-        </div>
-        <div class="w3-col" style="width:45%">
-          <span class="title">
-            {{ News.Title }}
-          </span>
-          </br></br></br>
-          <span class="newsDate">
-            {{ News.NewsTime }}
-          </span>
-          </br></br>
-          <span class="content" v-html="News.Content">
-          </span>
-        </div>
-      </div>
-      <div class="wrapper">
-        <router-link to="/newsList" title="點擊可回到最新消息列表">
-          <div class="return-btn">
-              <span class="btn-name">返回列表</span>
+          <div class="section-container">
+            <div class="w3-col">
+              <img :src="News.ImageUrl|imageCDN" alt="最新消息主圖片"
+                class="image">
+            </div>
+            <div class="w3-col">
+              <span class="title">
+                {{ News.Title }}
+              </span>
+              </br></br></br>
+              <span class="newsDate">
+                {{ News.NewsTime }}
+              </span>
+              </br></br>
+              <span class="content" v-html="News.Content">
+              </span>
+            </div>
+            <router-link to="/newsList" title="點擊可回到最新消息列表">
+              <div class="return-btn">
+                  <span class="btn-name">返回列表</span>
+              </div>
+            </router-link>
           </div>
-        </router-link>
+        </div>
       </div>
     </div>
   </div>

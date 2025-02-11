@@ -1,6 +1,6 @@
 <template>
   <div v-show="Ready" id="index">
-    <div class="sectionCollageHistoryHead">
+    <div class="sectionCollageHead">
       <div class="wrapper">
         <div class="w3-center">
           <img src="img/collage_img/line-3.png"
