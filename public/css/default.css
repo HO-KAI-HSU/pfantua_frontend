@@ -344,7 +344,7 @@ header .nav_close {
 /*[index-activity]=========*/
 #index .section7 {
 	position: relative;
-	padding: 50px 50px 0px 50px;
+	padding: 30px 50px 0px 50px;
 }
 
 #index .section7 .wrapper {
@@ -352,15 +352,22 @@ header .nav_close {
 	max-width: 1920px;
 }
 
+#index .section7 .wrapper-activity {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	max-width: 100%;
+}
+
 #index .section7 .wrapper-gap {
 	width: 500px;
-	height: 100px;
+	height: 10px;
 	color: #fff;
 }
 #index .section7 .section-title-line1 {
 	width: 42px;
 	height: 1px;
-	margin: 100px 0px 30px 0px;
+	margin: 10px 0px 30px 0px;
 	object-fit: contain;
 	background-color: #9d232f;
 }
@@ -407,9 +414,10 @@ header .nav_close {
 
 #index .section7 .w3-row {
 	position: relative;
-	display: block;
-	left: calc(3% - 8px);
-	margin: 50px 0 50px 0;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin: 20px 0 50px 0;
 }
 
 #index .section7 .w3-col {
@@ -502,7 +510,7 @@ header .nav_close {
 /*=[index-news]=========*/
 #index .section8 {
 	position: relative;
-	padding: 50px 50px 0px 50px;
+	padding: 30px 50px 0px 50px;
 }
 #index .section8 .wrapper {
 	text-align: center;
@@ -510,13 +518,13 @@ header .nav_close {
 }
 #index .section8 .wrapper-gap {
 	width: 500px;
-	height: 100px;
+	height: 10px;
 	color: #fff;
 }
 #index .section8 .section-title-line1 {
 	width: 42px;
 	height: 1px;
-	margin: 100px 0px 30px 0px;
+	margin: 10px 0px 30px 0px;
 	object-fit: contain;
 	background-color: #9d232f;
 }
@@ -553,7 +561,7 @@ header .nav_close {
 #index .section8 .w3-row {
 	position:relative;
 	left: 35px;
-	margin: 50px 0 50px 0;
+	margin: 20px 0 50px 0;
 }
 
 #index .section8 .w3-col {
@@ -674,6 +682,13 @@ header .nav_close {
 	padding: 0 0 0;
 }
 
+#index .sectionActivityList .wrapper-activity {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	max-width: 100%;
+}
+
 #index .sectionActivityList .wrapper-gap {
 	width: 500px;
 	height: 100px;
@@ -746,8 +761,9 @@ header .nav_close {
 
   #index .sectionActivityList .w3-row {
 	position: relative;
-	display: block;
-	left: calc(3% - 8px);
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
 	margin: 50px 0 50px 0;
   }
 
@@ -995,6 +1011,14 @@ header .nav_close {
 	max-width: 1920px;
 	padding: 0 0 0;
 }
+
+#index .sectionActivityHistoryList .wrapper-activityHistory {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	max-width: 100%;
+}
+
 #index .sectionActivityHistoryList .wrapper-gap {
 	width: 500px;
 	height: 100px;
@@ -1066,8 +1090,9 @@ header .nav_close {
 
   #index .sectionActivityHistoryList .w3-row {
 	position: relative;
-	display: block;
-	left: calc(3% - 8px);
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
 	margin: 50px 0 50px 0;
   }
 
@@ -1326,6 +1351,14 @@ header .nav_close {
 	max-width: 1920px;
 	padding: 0 0 0;
 }
+
+#index .sectionNewsList .wrapper-news {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	max-width: 100%;
+}
+
 #index .sectionNewsList .wrapper-gap {
 	width: 500px;
 	height: 100px;
@@ -1396,10 +1429,11 @@ header .nav_close {
   }
 
 #index .sectionNewsList .w3-row {
-position: relative;
-display: block;
-left: calc(3% - 8px);
-margin: 50px 0 50px 0;
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin: 50px 0 50px 0;
 }
 
 #index .sectionNewsList .w3-col {
@@ -3217,18 +3251,24 @@ footer .wrapper-footer-mobile {
 }
 footer .wrapper-footer-mobile .item-logo {
 	max-width: 100%;
-	height: 70px;
+	height: 50px;
 	display: flex;
 	justify-content: center;
 	margin: 10px 0px 30px 0px;
 }
+
+footer .wrapper-footer-mobile .item-logo .Group-4 {
+    width: 230px;
+	height: 70px;
+}
+
 footer .wrapper-footer-mobile .item-contact {
 	text-align: center;
 	margin: 20px 0px 20px 0px;
 }
 footer .wrapper-footer-mobile .item-contact .image {
-	width: 60px;
-	height: 60px;
+	width: 40px;
+	height: 40px;
 }
 footer .wrapper-footer-mobile .item {
 	text-align: center;
@@ -3237,13 +3277,13 @@ footer .wrapper-footer-mobile .item {
 footer .wrapper-footer-mobile .item .itemTitle {
 	margin: 30px 0px 7px 10px;
     color: #fff;
-    font-size: 24px;
+    font-size: 20px;
 }
 footer .wrapper-footer-mobile .copyright {
 	height: 50px;
 	object-fit: contain;
 	/* font-family: .AppleSystemUIFont; */
-	font-size: 24px;
+	font-size: 20px;
 	font-weight: normal;
 	font-stretch: normal;
 	font-style: normal;
@@ -3293,7 +3333,24 @@ footer .wrapper-footer-mobile .copyright {
 
 }
 
-@media screen and (max-width: 1358px) {
+@media screen and (max-width: 1365px) {
+
+	#index .section7 .w3-row {
+		left: 0px;
+		max-width: 500px;
+	}
+
+	#index .sectionActivityHistoryList .w3-row {
+		left: 0px;
+	}
+
+	#index .sectionActivityList .w3-row {
+		left: 0px;
+	}
+
+	#index .sectionNewsList .w3-row {
+		left: 0px;
+	}
 
 	#index .sectionActivityHistory .section-container .w3-row {
 		display: flex;
@@ -3466,42 +3523,15 @@ footer .wrapper-footer-mobile .copyright {
 
 @media screen and (max-width: 980px) {
 
-	#index .section7 .w3-row {
-		left: 0px;
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: center;
-	}
-
-	#index .sectionActivityList .w3-row {
-		left: 0px;
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: center;
-	}
 
 	#index .sectionActivityList .section-nav {
 		left: 0px;
 		display: flex;
 	}
 
-	#index .sectionNewsList .w3-row {
-		left: 0px;
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: center;
-	}
-
 	#index .sectionNewsList .section-nav {
 		left: 0px;
 		display: flex;
-	}
-
-	#index .sectionActivityHistoryList .w3-row {
-		left: 0px;
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: center;
 	}
 
 	#index .sectionActivityHistoryList .section-nav {
@@ -3523,7 +3553,7 @@ footer .wrapper-footer-mobile .copyright {
 @media screen and (max-width: 900px) {
 	footer {
 		padding: 20px 20px 0px 20px;  
-		height: 550px;
+		height: 450px;
 	}
 
 	footer .wrapper-footer-web  {		
@@ -3728,7 +3758,7 @@ footer .wrapper-footer-mobile .copyright {
 
 	#index .section7 .section-activity-item-img {
 		max-width: 100%;
-		height: 322px;
+		max-height: 322px;
 	}
 
 	#index .sectionActivityList .section-item-img {
@@ -3775,6 +3805,6 @@ footer .wrapper-footer-mobile .copyright {
 
 	footer {
 		padding: 20px 20px 0px 20px;  
-		height: 650px;
+		height: 450px;
 	}
 }

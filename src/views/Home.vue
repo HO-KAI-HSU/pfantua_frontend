@@ -60,7 +60,7 @@
             class="section-title-ellipse">
         </div>
       </div>
-      <div class="wrapper">
+      <div class="wrapper-activity">
         <div class="w3-row">
           <div v-for="(activity, index) in ActivityList">			
             <div class="w3-col w3-center" :key="activity.NewsID" :title="activity.NewsID">

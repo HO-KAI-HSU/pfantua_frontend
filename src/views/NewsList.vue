@@ -37,21 +37,23 @@
           <span class="section-nav">
             首頁 ><span class="title-name">最新消息</span>
           </span>
-          <div class="w3-row" v-for="(rowIndex) in (NewsRows)" :key="rowIndex" :title="rowIndex">
-            <div v-for="(news, index) in NewsList">			
-              <div class="w3-col w3-center" :key="news.NewsID" v-if="rowIndex == (Math.floor(index / 3) + 1)" :title="news.NewsID">        
-                <router-link :to="`/news/${news.NewsID}`" title="點擊可進入最新消息內容">
-                  <div class="section-item">
-                    <img :src="news.ImageUrl|imageCDN" alt="最新消息主圖片"
-                      class="section-item-img">
-                      </br>
-                      <div class="section-news-item-content">
-                        <span class="section-item-date">{{ news.NewsTime }}</span>
+          <div class="wrapper-news">
+            <div class="w3-row" v-for="(rowIndex) in (NewsRows)" :key="rowIndex" :title="rowIndex">
+              <div v-for="(news, index) in NewsList">			
+                <div class="w3-col w3-center" :key="news.NewsID" v-if="rowIndex == (Math.floor(index / ColCount) + 1)" :title="news.NewsID">        
+                  <router-link :to="`/news/${news.NewsID}`" title="點擊可進入最新消息內容">
+                    <div class="section-item">
+                      <img :src="news.ImageUrl|imageCDN" alt="最新消息主圖片"
+                        class="section-item-img">
                         </br>
-                        <span class="section-item-title">{{ news.Title }}</span>
-                      </div>
-                  </div>
-                </router-link>
+                        <div class="section-news-item-content">
+                          <span class="section-item-date">{{ news.NewsTime }}</span>
+                          </br>
+                          <span class="section-item-title">{{ news.Title }}</span>
+                        </div>
+                    </div>
+                  </router-link>
+                </div>
               </div>
             </div>
           </div>
@@ -76,25 +78,54 @@ export default {
       Total: 0,
       NewsList: [],
       NewsRows: 0,
+      ColCount: 3,
+      Width: 0
     };
   },
   async mounted() {
     var response = await this.$api.getNewsList(1, 9);
     this.NewsList = response.NewsList;
-    this.NewsRows = Math.ceil(response.NewsList.length / 3);
+    this.NewsRows = Math.ceil(response.NewsList.length / this.ColCount);
     this.Total = response.Total;
     this.Page = 1;
     this.Limit = 9;
     this.Ready = true;
+    window.addEventListener('resize', this.handleResize);
+  },
+  watch: {
+    Width: {
+      immediate: true,
+      deep: true,
+      handler(val) {
+        var w = val;
+        if (980 <= w && w < 1365) {
+          this.ColCount = 2;
+        } else if (0 <= w && w < 980) {
+          this.ColCount = 1;
+        } else {
+          this.ColCount = 3;
+        }
+        console.log("螢幕寬度為：" + this.Width);
+        console.log("欄數：" + this.ColCount);
+        this.getListBySwitchPage(this.Page);
+      }
+    }
   },
   methods: {
     async getListBySwitchPage(nowPage) {
       var response = await this.$api.getNewsList(nowPage, 9);
       this.NewsList = response.NewsList;
-      this.NewsRows = Math.ceil(response.NewsList.length / 3);
+      this.NewsRows = Math.ceil(response.NewsList.length / this.ColCount);
       this.Total = response.Total;
       this.Page = nowPage;
     },
+    async handleResize() {
+      this.Width = window.innerWidth;
+    }
   },
+  beforeDestroy() {
+    // 在组件销毁前取消事件监听
+    window.removeEventListener('resize', this.handleResize);
+  }
 };
 </script>
