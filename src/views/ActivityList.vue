@@ -40,7 +40,7 @@
           <div class="wrapper-activity">
             <div class="w3-row" v-for="(rowIndex) in (ActivityRows)" :key="rowIndex" :title="rowIndex">
               <div v-for="(activity, index) in ActivityList">			
-                <div class="w3-col w3-center" :key="activity.NewsID" v-if="rowIndex == (Math.floor(index / ColCount) + 1)" :title="activity.NewsID">        
+                <div class="w3-col w3-center" :key="activity.NewsID" v-if="rowIndex == (Math.floor(index / ColCount) + 1) && activity.NewsID.indexOf('nan') == -1" :title="activity.NewsID">        
                   <router-link :to="`/activity/${activity.NewsID}`" title="點擊可進入活動資訊內容">
                     <div class="section-item">
                       <img :src="activity.ImageUrl|imageCDN" alt="活動資訊主圖片"
@@ -53,6 +53,8 @@
                         </div>
                     </div>
                   </router-link>
+                </div>
+                <div class="w3-col-nan w3-center" :key="activity.NewsID" v-if="rowIndex == (Math.floor(index / ColCount) + 1) && activity.NewsID.indexOf('nan') >= 0" :title="activity.NewsID">        
                 </div>
               </div>
             </div>
@@ -85,12 +87,15 @@ export default {
   async mounted() {
     var response = await this.$api.getActivityList(1, 9);
     this.ActivityList = response.NewsList;
+    this.addEmptyGrid();
+
     this.ActivityRows = Math.ceil(response.NewsList.length / this.ColCount);
     this.Total = response.Total;
     this.Page = 1;
     this.Limit = 9;
     this.Ready = true;
     window.addEventListener('resize', this.handleResize);
+    this.handleResize();
   },
   watch: {
     Width: {
@@ -98,9 +103,9 @@ export default {
       deep: true,
       handler(val) {
         var w = val;
-        if (980 <= w && w < 1365) {
+        if (980 <= w && w < 1400) {
           this.ColCount = 2;
-        } else if (0 <= w && w < 980) {
+        } else if (0 < w && w < 980) {
           this.ColCount = 1;
         } else {
           this.ColCount = 3;
@@ -116,12 +121,26 @@ export default {
     async getListBySwitchPage(nowPage) {
       var response = await this.$api.getActivityList(nowPage, 9);
       this.ActivityList = response.NewsList;
+      this.addEmptyGrid();
+
       this.ActivityRows = Math.ceil(response.NewsList.length / this.ColCount);
       this.Total = response.Total;
       this.Page = nowPage;
     },
     async handleResize() {
       this.Width = window.innerWidth;
+    },
+    async addEmptyGrid() {
+      if (this.ActivityList.length % this.ColCount != 0) {
+        var addCount = (this.ColCount - (this.ActivityList.length % this.ColCount));
+        for (var i = 0; i < addCount; i++) {
+          this.ActivityList.push(new Object(
+            {
+              NewsID: "nan" + i,
+            }
+          ));
+        }
+      }
     }
   },
 

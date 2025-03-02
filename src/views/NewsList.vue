@@ -40,7 +40,7 @@
           <div class="wrapper-news">
             <div class="w3-row" v-for="(rowIndex) in (NewsRows)" :key="rowIndex" :title="rowIndex">
               <div v-for="(news, index) in NewsList">			
-                <div class="w3-col w3-center" :key="news.NewsID" v-if="rowIndex == (Math.floor(index / ColCount) + 1)" :title="news.NewsID">        
+                <div class="w3-col w3-center" :key="news.NewsID" v-if="rowIndex == (Math.floor(index / ColCount) + 1) && news.NewsID.indexOf('nan') == -1" :title="news.NewsID">        
                   <router-link :to="`/news/${news.NewsID}`" title="點擊可進入最新消息內容">
                     <div class="section-item">
                       <img :src="news.ImageUrl|imageCDN" alt="最新消息主圖片"
@@ -53,6 +53,8 @@
                         </div>
                     </div>
                   </router-link>
+                </div>
+                <div class="w3-col-nan w3-center" :key="news.NewsID" v-if="rowIndex == (Math.floor(index / ColCount) + 1) && news.NewsID.indexOf('nan') >= 0" :title="news.NewsID">        
                 </div>
               </div>
             </div>
@@ -85,12 +87,15 @@ export default {
   async mounted() {
     var response = await this.$api.getNewsList(1, 9);
     this.NewsList = response.NewsList;
+    this.addEmptyGrid();
+
     this.NewsRows = Math.ceil(response.NewsList.length / this.ColCount);
     this.Total = response.Total;
     this.Page = 1;
     this.Limit = 9;
     this.Ready = true;
     window.addEventListener('resize', this.handleResize);
+    this.handleResize();
   },
   watch: {
     Width: {
@@ -98,9 +103,9 @@ export default {
       deep: true,
       handler(val) {
         var w = val;
-        if (980 <= w && w < 1365) {
+        if (980 <= w && w < 1400) {
           this.ColCount = 2;
-        } else if (0 <= w && w < 980) {
+        } else if (0 < w && w < 980) {
           this.ColCount = 1;
         } else {
           this.ColCount = 3;
@@ -115,12 +120,30 @@ export default {
     async getListBySwitchPage(nowPage) {
       var response = await this.$api.getNewsList(nowPage, 9);
       this.NewsList = response.NewsList;
+      this.addEmptyGrid();
+
       this.NewsRows = Math.ceil(response.NewsList.length / this.ColCount);
       this.Total = response.Total;
       this.Page = nowPage;
     },
     async handleResize() {
       this.Width = window.innerWidth;
+    },
+    addEmptyGrid() {
+      console.log("NewsList.length Before: " + this.NewsList.length);
+      console.log("ColCount : " + this.ColCount);
+      if ((this.NewsList.length % this.ColCount) != 0) {
+        var addCount = (this.ColCount - (this.NewsList.length % this.ColCount));
+        console.log("Add Count : " + addCount);
+        for (var i = 0; i < addCount; i++) {
+          this.NewsList.push(new Object(
+            {
+              NewsID: "nan" + i,
+            }
+          ));
+        }
+      }
+      console.log("NewsList.length After: " + this.NewsList.length);
     }
   },
   beforeDestroy() {
