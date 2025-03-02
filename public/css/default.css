@@ -570,6 +570,10 @@ header .nav_close {
 	max-width: 620px;
 }
 
+#index .section8 .w3-col-nan {
+	width: 620px;
+}
+
 #index .section8 .section-news-date-container {
 	position: absolute;
 	max-width: 155px;
@@ -3350,7 +3354,7 @@ footer .wrapper-footer-mobile .copyright {
 
 }
 
-@media screen and (max-width: 1365px) {
+@media screen and (max-width: 1385px) {
 
 	#index .section7 .w3-row {
 		left: 0px;

@@ -125,7 +125,7 @@
       <div class="wrapper">
         <div class="w3-row" v-for="(rowIndex) in 2" :key="rowIndex" :title="rowIndex">
           <div v-for="(news, index) in NewsList">	
-            <div class="w3-col w3-container" :key="news.NewsID" v-if="rowIndex == (Math.floor(index / 2) + 1)" :title="news.NewsID">
+            <div class="w3-col w3-container" :key="news.NewsID" v-if="rowIndex == (Math.floor(index / 2) + 1) && news.NewsID.indexOf('nan') == -1" :title="news.NewsID">
               <router-link :to="`/news/${news.NewsID}`" title="點擊可進入活動內容">
                 <div class="section-news-date-container">
                     <span class="year">{{ news.NewsTime | toYYYY }}</span>
@@ -136,6 +136,8 @@
                     <span class="content">{{ news.Title }}</span>
                 </div>
               </router-link>
+            </div>
+            <div class="w3-col-nan w3-center" :key="news.NewsID" v-if="rowIndex == (Math.floor(index / 2) + 1) && news.NewsID.indexOf('nan') >= 0" :title="news.NewsID">        
             </div>
           </div>
         </div>
@@ -174,6 +176,7 @@ export default {
     this.CollageDepartmentList = response.CollageDepartmentList;
     this.ActivityList = response.ActivityList;
     this.NewsList = response.NewsList;
+    this.addNewsEmptyGrid();
 
     this.$nextTick(() => {
       $(".mainSlide").slick({
@@ -186,6 +189,22 @@ export default {
     this.loadCustomJs();
   },
   methods: {
+    addNewsEmptyGrid() {
+      console.log("NewsList.length Before: " + this.NewsList.length);
+      console.log("ColCount : " + 2);
+      if ((this.NewsList.length % 2) != 0) {
+        var addCount = (2 - (this.NewsList.length % 2));
+        console.log("Add Count : " + addCount);
+        for (var i = 0; i < addCount; i++) {
+          this.NewsList.push(new Object(
+            {
+              NewsID: "nan" + i,
+            }
+          ));
+        }
+      }
+      console.log("NewsList.length After: " + this.NewsList.length);
+    }    
   },
 };
 </script>

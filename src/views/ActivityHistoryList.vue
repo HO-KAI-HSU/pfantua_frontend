@@ -102,7 +102,7 @@ export default {
       deep: true,
       handler(val) {
         var w = val;
-        if (980 <= w && w < 1400) {
+        if (980 <= w && w < 1385) {
           this.ColCount = 2;
         } else if (0 < w && w < 980) {
           this.ColCount = 1;
