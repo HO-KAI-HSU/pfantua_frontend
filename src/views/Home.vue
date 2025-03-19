@@ -11,19 +11,12 @@
     </div>
     <section class="section6">
       <div class="wrapper">
-        <div class="w3-row">
-          <div v-for="(collageDepartment, index) in CollageDepartmentList">
-            <div class="w3-col w3-center" :key="collageDepartment.CollageDepartmentID" style="width:18%">
-              <a :href="collageDepartment.CollageDepartmentLinkUrl" target="_blank" :title="collageDepartment.Name">
-                <span class="item-dept">{{ collageDepartment.Name }}</span>
-              </a>
-            </div>
-            <div class="w3-col w3-center" style="width:2%" v-if="index != (CollageDepartmentList.length - 1)">
-                <img src="img/index_img/line-15.png"
-                  srcset="img/index_img/line-15@2x.png 2x,
-                          img/index_img/line-15@3x.png 3x"
-                  class="item-dept-line">
-            </div>
+        <div class="item-container" v-for="(collageDepartment, index) in CollageDepartmentList">
+          <div class="item-dept-container" :key="collageDepartment.CollageDepartmentID">
+            <a :href="collageDepartment.CollageDepartmentLinkUrl" target="_blank" :title="collageDepartment.Name">
+              <span class="item-dept">{{ collageDepartment.Name }}</span>
+            </a>
+            <img src="img/index_img/line-15.png" class="item-dept-line" v-if="index != (CollageDepartmentList.length - 1)">
           </div>
         </div>
       </div>

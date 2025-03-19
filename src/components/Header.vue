@@ -2,10 +2,8 @@
   <div>
 		<header>
 			<div class="wrapper">
-				<img src="img/index_img/rectangle-2.png" 
-					srcset="img/index_img/rectangle-2@2x.png 2x, 
-					        img/index_img/rectangle-2@3x.png 3x" 
-					class="Rectangle-2">
+        <img src="img/index_img/rectangle-2@3x.png"
+            class="Rectangle-2">
 			</div>
 			<div class="wrapper">
 				<div class="w3-row">

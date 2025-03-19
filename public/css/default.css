@@ -39,37 +39,37 @@ input, select, textarea {outline: none;}
 */
 
 .wrapper {
-	max-width: 1920px;
+	max-width: 100%;
 	box-sizing: border-box;
 	overflow: hidden;
 	margin: 0 auto;
 }
-  
-	img.Rectangle-2 {
-	width: 1920px;
-	height: 124px;
-	padding: 0 0 26px;
-	margin: 0 0 0px;
-	/* padding: 36.7px 260px 17px 183px; */
-	object-fit: contain;
-	opacity: 0.4;
-	box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
-	background-color: #000;
-	}
 
 
 /*=[header]=========*/
 header{
+	position: relative;
 	width: 100%;
 	height: 10%;
 	left: 0px;
 	top: 0px;
 }
 header .wrapper {
+	width: 100%;
     position: absolute;
     z-index: 20;
 	overflow: visible;
 }
+
+header .Rectangle-2 {
+	width: 100%;
+	height: 124px;
+	object-fit: fill;
+	opacity: 0.4;
+	box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+	background-color: #000;
+}
+
 header .logo {
 	max-width: 223px;
     height: 58.3px;
@@ -230,6 +230,7 @@ header .nav_close {
   .slideLogin .slide .img {
     width: 100%;
 	max-height: 500px;
+	object-fit: fill;
   }
   
   .home-wide .slick-dotted.slick-slider.mainSlide {
@@ -308,19 +309,32 @@ header .nav_close {
 
 /*=[index]=========*/
 #index .section6 .wrapper {
-	width: 100%;
-	height: 145px;
+	width: 1920px;
+	height: 130px;
 	margin: 0 0 0;
 	padding: 53.5px 0px 43.5px 0px;
 	object-fit: contain;
 	text-align: center;
 	background-color: #c7c8cc;
+	display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+#index .section6 .wrapper .item-container {
+    display: inline-block;
+	width: 280px;
+}
+
+#index .section6 .item-dept-container {
+	display: block;
+	width: 20px;
+	height: 33px;
 }
 
 #index .section6 .item-dept {
-	width: 100%;
 	height: 33px;
-	margin: 5.5px 0 9.5px 0;
+	margin: 5.5px 90px 9.5px 90px;
 	object-fit: contain;
 	font-size: 22px;
     font-family: .AppleSystemUIFont;
@@ -333,10 +347,16 @@ header .nav_close {
 	color: #fff;
 }
 
+#index .section6 .item-dept-line-container {
+	display: block;
+	width: 1px;
+	height: 33px;
+}
+
 #index .section6 .item-dept-line {
 	width: 1px;
 	height: 33px;
-	/* margin: 0 130px 0 130px; */
+	margin: 0 30px 0 30px;
 	object-fit: contain;
 	background-color: #fff;
 }
@@ -436,7 +456,7 @@ header .nav_close {
 #index .section7 .section-activity-item-img {
 	max-width: 380px;
 	height: 322px;
-	object-fit: contain;
+	object-fit: fill;
 }
 
 #index .section7 .section-activity-item-content {
@@ -620,7 +640,7 @@ header .nav_close {
 }
 
 #index .section8 .section-news-content-container {
-	width: 450px;
+	max-width: 450px;
 	height: 246px;
 	overflow:hidden;
 	margin: 0px 0px 0px 155px;
@@ -632,7 +652,7 @@ header .nav_close {
 }
 
 #index .section8 .section-news-content-container .content {
-	width: 450px;
+	max-width: 450px;
 	height: 167px;
 	object-fit: contain;
 	font-size: 24px;
@@ -803,9 +823,9 @@ header .nav_close {
 }
 
 #index .sectionActivityList .section-item-img {
-	max-width: 380px;
+	width: 380px;
 	height: 322px;
-	object-fit: contain;
+	object-fit: fill;
 }
 
 #index .sectionActivityList .section-activity-item-content {
@@ -1137,9 +1157,9 @@ header .nav_close {
 }
 
 #index .sectionActivityHistoryList .section-item-img {
-	max-width: 380px;
+	width: 380px;
 	height: 322px;
-	object-fit: contain;
+	object-fit: fill;
 }
 
 #index .sectionActivityHistoryList .section-item-content {
@@ -1482,9 +1502,9 @@ header .nav_close {
 }
 
 #index .sectionNewsList .section-item-img {
-	max-width: 380px;
+	width: 380px;
 	height: 322px;
-	object-fit: contain;
+	object-fit: fill;
 }
 
 #index .sectionNewsList .section-news-item-content {
@@ -3588,6 +3608,12 @@ footer .wrapper-footer-mobile .copyright {
 	.sectionCollageInfo .section-banner .banner-background {
 		height: 650px
 	}
+
+	.slideLogin .slide .img {
+		width: 100%;
+		height: 300px;
+		object-fit: fill;
+	  }
 }
 
 @media screen and (max-width: 767px) {
@@ -3685,12 +3711,12 @@ footer .wrapper-footer-mobile .copyright {
 	}
 
 	#index .section8 .section-news-content-container {
-		max-width: 450px;
+		max-width: 100%;
 		padding: 20px 30px 20px 30px;
 	}
 
 	#index .section8 .section-news-content-container .content {
-		max-width: 450px;
+		max-width: 100%;
 		display: block;
 		height: 180px;
 		overflow: hidden;
@@ -3710,12 +3736,6 @@ footer .wrapper-footer-mobile .copyright {
 
 	#index .sectionActivityHistoryList .w3-col {
 		margin: 20px 0px 20px 0px;
-	}
-}
-
-@media screen and (max-width: 680px) {
-	#index .section6 .wrapper {
-		padding: 35px 0px 43.5px 0px;
 	}
 }
 
@@ -3773,10 +3793,6 @@ footer .wrapper-footer-mobile .copyright {
 		height: 58.3px;
 		margin: 35px 100px 20px 20px;
 		object-fit: contain;
-	}
-
-	#index .section6 .wrapper {
-		padding: 30px 0px 43.5px 0px;
 	}
 
 	#index .section7 .section-activity-item-img {
