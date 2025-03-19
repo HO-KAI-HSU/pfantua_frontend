@@ -10,8 +10,6 @@
 					<div class="w3-col m4">
 						<router-link to="/" title="首頁">
 							<img src="img/index_img/group-2.png"
-							srcset="img/index_img/group-2@2x.png 2x,
-							        img/index_img/group-2@3x.png 3x"
 							class="logo">
 						</router-link>
 					</div>

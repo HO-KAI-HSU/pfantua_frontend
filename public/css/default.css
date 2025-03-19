@@ -71,10 +71,10 @@ header .Rectangle-2 {
 }
 
 header .logo {
-	max-width: 223px;
+	width: 223px;
     height: 58.3px;
     margin: 36.7px 200px 7px 80px;
-	object-fit: contain;
+	object-fit: fill;
 }
 header .mainnav {
 	margin: 55px 0 0px;
@@ -310,7 +310,7 @@ header .nav_close {
 /*=[index]=========*/
 #index .section6 .wrapper {
 	width: 1920px;
-	height: 130px;
+	height: 145px;
 	margin: 0 0 0;
 	padding: 53.5px 0px 43.5px 0px;
 	object-fit: contain;
@@ -334,7 +334,7 @@ header .nav_close {
 
 #index .section6 .item-dept {
 	height: 33px;
-	margin: 5.5px 90px 9.5px 90px;
+	margin: 5.5px 90px 5.5px 90px;
 	object-fit: contain;
 	font-size: 22px;
     font-family: .AppleSystemUIFont;
@@ -3484,9 +3484,7 @@ footer .wrapper-footer-mobile .copyright {
 	header .mainnav.open {
       	left: 0;
   	}
-  	header .logo {
-		width: 260px;
-	}
+
 	header .mainnav ul {
 		margin-top: 40px;
 		text-align: left;
@@ -3789,10 +3787,10 @@ footer .wrapper-footer-mobile .copyright {
 @media screen and (max-width: 500px) {
 
 	header .logo {
-		max-width: 200px;
+		width: 200px;
 		height: 58.3px;
-		margin: 35px 100px 20px 20px;
-		object-fit: contain;
+		margin: 35px 20px 20px 20px;
+		object-fit: fill;
 	}
 
 	#index .section7 .section-activity-item-img {
